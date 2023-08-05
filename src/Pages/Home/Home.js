@@ -13,7 +13,7 @@ const Home = () => {
             <Header />
 
             <body>
-                <div className={styles.search_section}> <input type="search" placeholder='Search Contacts' onChange={(event) => { setSearch(event.target.value) }} /> </div>
+                <div className={styles.search_section}> <input type="search" placeholder='Search by First Name' onChange={(event) => { setSearch(event.target.value) }} /> </div>
 
                 {/*  */}
                 <section>
@@ -28,7 +28,9 @@ const Home = () => {
                             </tr>
                         </thead>
                         <tbody>
-                            {data.map((items) => (
+                            {data.filter((items) => {
+                                return search.toLowerCase() === "" ? items : items.first_name.toLowerCase().includes(search) || items.first_name.toUpperCase().includes(search)
+                            }).map((items) => (
                                 <tr key={items.id}>
                                     <td>{items.id}</td>
                                     <td>{items.first_name}</td>
