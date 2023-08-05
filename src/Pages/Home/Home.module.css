@@ -27,6 +27,7 @@
     height: 30px;
     border: 1px solid gray;
     border-radius: 5px;
+    margin-bottom: 30px;
 }
 
 .search_section input {
@@ -40,5 +41,44 @@
     border-radius: 5px;
     color: var(--black-color);
 }
+
+/* Table part start */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+thead {
+    background-color: #f2f2f2;
+}
+
+th,
+td {
+    height: 30px;
+    padding: 0 10px;
+    vertical-align: middle;
+    text-align: left;
+    border: 1px solid gray;
+    border-radius: 5px;
+
+}
+
+th {
+    font-weight: bold;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: white;
+    color: var(--black-color);
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+    color: var(--black-color);
+}
+
+
+
+
 
 /* Body Part End */
